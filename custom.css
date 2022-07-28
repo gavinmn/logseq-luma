@@ -151,15 +151,15 @@ h1, h2, h3 {
 }
 
 /* hide help button */
-.cp__sidebar-help-btn {
+/* .cp__sidebar-help-btn {
   display: none;
-}
+} */
 
 /* hide titlebar icons */
-a.nav-left,
+/* a.nav-left,
 a.nav-right {
   display: none;
-}
+} */
 
 /* hide recents */
 .recent {
@@ -169,6 +169,11 @@ a.nav-right {
 .cp__header::after,
 .cp__right-sidebar-topbar::after {
   display: none;
+}
+
+/* tint sidebar titlebar text*/
+.cp__right-sidebar-settings {
+  color: var(--text-quarternary);
 }
 
 /* desktop layout adjustments */
@@ -236,7 +241,8 @@ a.nav-right {
   }
 
   .cp__right-sidebar-topbar {
-    display: none;
+    /* display: none; */
+    height: 44px;
   }
 
   .theme-inner.ls-left-sidebar-open > #app-container > #left-container > .cp__header > .l {
@@ -245,7 +251,7 @@ a.nav-right {
   }
 
   .sidebar-item-list {
-    margin-top: 44px;
+    /* margin-top: 44px; */
     margin-right: 12px;
     border-radius: 6px;
     height: calc(100vh - 56px) !important;
@@ -267,9 +273,9 @@ a.nav-right {
   }
   
   /* hide navigation arrows only on desktop */
-  .it.navigation.nav-left.button.icon, .it.navigation.nav-right.button.icon, .button.icon.toggle-right-sidebar {
+  /* .it.navigation.nav-left.button.icon, .it.navigation.nav-right.button.icon, .button.icon.toggle-right-sidebar {
     display: none;
-  }
+  } */
   
   ::-webkit-scrollbar {
     width: 20px;
@@ -403,7 +409,6 @@ code {
 
 #ui__ac > div {
   color: var(--text-faint);
-
 }
 
 .absolute.rounded-md.shadow-lg.absolute-modal{
@@ -664,3 +669,44 @@ a[data-ref="references"] {
 a[data-ref="fleeting notes"] {
   color: var(--text-primary);
 }
+
+
+/* bullet threading */
+/* bottom curve */
+.ls-block > div > div.items-center::before {
+  pointer-events: none;
+  content: "";
+  left: calc(var(--ls-block-bullet-threading-width) * -1) !important;
+  right: 6px;
+  top: calc(-50% + var(--ls-block-bullet-threading-width) * 0.5 - 1px);
+  bottom: 50%;
+  /* shift left 1px for border */
+  position: absolute;
+  border-left: var(--ls-block-bullet-threading-width) solid transparent;
+  border-bottom: var(--ls-block-bullet-threading-width) solid transparent;
+  border-bottom-left-radius: 4px !important;
+}
+
+/* center line */
+.block-children > .ls-block::before {
+  pointer-events: none;
+  content: "";
+  top: -1rem;
+  bottom: 0;
+  border-left: var(--ls-block-bullet-threading-width) solid transparent;
+  left: calc(var(--ls-block-bullet-threading-width) * -1);
+  position: absolute;
+}
+
+/* remove color from bullets that are threaded */
+.bullet {
+  background-color: var(--ls-block-bullet-color) !important;
+  box-shadow: unset !important;
+}
+
+/* remove color from bullet group collapse / expand lines */
+.block-children-left-border:hover {
+  background-color: var(--ls-block-bullet-color) !important; 
+}
+
+
