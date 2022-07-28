@@ -9,5 +9,5 @@ A minimal and detail oriented light and dark theme for Logseq
 Copy `custom.css` into `logseq/custom.css` or paste this line into `logseq/custom.css`
 
 ```css
-@import url('');
+@import url('https://cdn.jsdelivr.net/gh/gavinmn/logseq-luma/custom.css');
 ```
