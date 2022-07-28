@@ -6,6 +6,12 @@ A minimal and detail oriented light and dark theme for Logseq. *Presented as is 
 
 ## Installation
 
+**Marketplace**
+
+Find Luma in the Logseq theme marketplace within the app.
+
+**Manual installation**
+
 Copy `custom.css` into `logseq/custom.css` or paste this line into `logseq/custom.css`
 
 ```css
