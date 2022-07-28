@@ -1,0 +1,24 @@
+{
+  "name": "Luma",
+  "author": "@gavmn",
+  "version": "0.1",
+  "description": "A minimal and detail oriented light and dark theme for Logseq",
+  "logseq": {
+    "themes": [
+      {
+        "name": "Luma Light",
+        "url": "./custom.css",
+        "description": "A minimal and detail oriented light theme for Logseq",
+        "mode": "light"
+      },
+      {
+        "name": "Luma Dark",
+        "url": "./custom.css",
+        "description": "A minimal and detail oriented dark theme for Logseq",
+        "mode": "dark"
+      }
+    ],
+    "id": "luma",
+    "icon": "./luma-icon.png"
+  }
+}
