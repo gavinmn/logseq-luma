@@ -1,0 +1,656 @@
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* hide scrollbars */
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+:root {
+  --sans-serif: "Inter", sans;
+  --ls-left-sidebar-width: 200px;
+}
+
+/* hide scrollbars */
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 16px solid transparent;
+  background-clip: content-box;
+}
+
+
+/* light colors */
+.light-theme, .white-theme, html[data-theme=light] {
+
+  --bg1: hsl(0, 0%, 100%);
+  --bg2: hsl(210, 29%, 97%);
+  --bg3: hsl(227, 33%, 95%);
+  --bg4: hsl(223, 14%, 90%);
+
+  --bg-hover: hsla(227, 33%, 95%, 0.494);
+  --bg-links:var(--bg2);
+
+  --header-text: hsl(205, 23%, 16%);
+  --text-primary:  hsl(205, 23%, 16%);
+  --text-secondary: hsl(226, 9%, 44%);
+  --text-tertiary: hsl(225, 13%, 58%);
+  --text-quarternary: hsl(224, 14%, 64%);
+  --text-faint: hsl(225, 23%, 76%);
+  --icon: hsl(227, 16%, 67%);
+
+  --ls-primary-text-color: var(--text-primary);
+  --ls-primary-background-color: var(--bg1);
+  --ls-secondary-background-color: var(--bg2); 
+  --ls-tertiary-background-color: var(--bg3);
+  --ls-quaternary-background-color: var(--bg3);
+  --ls-icon-color: var(--icon);
+  --ls-block-properties-background-color: var(--bg2);
+  --ls-table-tr-even-background-color: var(--bg2);
+  --ls-block-bullet-border-color: var(--bg3);
+  --ls-page-checkbox-color: var(--bg2);
+  --color-level-2: var(--bg2);
+  --ls-block-bullet-color: hsl(206, 22%, 29%);
+  --ls-guideline-color: hsla(204, 29%, 90%, .8);
+  --ls-border-color: hsl(204, 29%, 90%);
+  --ls-checkbox-border-color: var(--ls-border-color);
+
+  --box-shadow-med: 0px 6px 10px hsla(210, 4%, 18%, 0.05);
+  --box-shadow-small: 0px 2px 3px hsla(210, 12%, 10%, 0.05);
+
+  --ls-scrollbar-width: 20px;
+  --ls-scrollbar-foreground-color: var(--ls-tertiary-background-color);
+  --ls-scrollbar-background-color: transparent;
+  --ls-scrollbar-thumb-hover-color: var(--ls-quaternary-background-color);
+}
+
+/* dark colors */
+.dark-theme, html[data-theme=dark] {
+
+  --bg1: hsl(240, 7%, 13%);
+  --bg2: hsl(240, 7%, 9%);
+  --bg3: hsl(240, 6%, 18%);
+  --bg4: hsl(240, 8%, 24%);
+
+  --bg-hover: hsla(240, 7%, 5%, 0.2);
+  --bg-links: hsl(240, 9%, 11%);
+
+  --text-primary: hsl(240, 22%, 89%);
+  --text-secondary: hsl(227, 9%, 49%);
+  --text-tertiary: hsl(228, 7%, 39%);
+  --text-quarternary: hsl(226, 15%, 33%);
+  --text-faint: hsl(226, 10%, 56%);
+  --icon: hsl(226, 10%, 56%);
+
+  --ls-primary-text-color: var(--text-primary);
+  --ls-secondary-text-color:var(--text-secondary);
+  --ls-link-ref-text-color: hsl(218, 40%, 62%);
+  --ls-page-checkbox-color: hsl(240, 7%, 10%);
+  --ls-tag-text-color: hsl(217, 25%, 55%);
+  --ls-block-highlight-color: hsla(217, 37%, 22%, 0.635);
+  --ls-page-inline-code-bg-color: var(--bg2);
+  --ls-page-properties-background-color: var(--bg2);
+  --ls-guideline-color: hsla(217, 25%, 55%, 0.196);
+  --ls-block-bullet-color: hsl(217, 29%, 69%);
+  --ls-block-bullet-border-color: hsla(217, 29%, 69%, 0.2);
+  --ls-secondary-border-color: hsl(217, 25%, 55%);
+  --ls-active-primary-color: hsl(217, 25%, 55%);
+  --ls-link-text-color: hsl(217, 25%, 55%);
+  --ls-icon-color: hsl(217, 25%, 55%);
+  --ls-title-text-color: var(--text-primary);
+  --ls-primary-background-color: var(--bg1);
+  --ls-secondary-background-color: var(--bg2); 
+  --ls-tertiary-background-color: var(--bg3);
+  --ls-quaternary-background-color: var(--bg4);
+  --ls-block-properties-background-color: var(--bg2);
+  --ls-table-tr-even-background-color: var(--bg2);
+  --ls-block-bullet-border-color: var(--bg3);
+  --ls-border-color: hsl(240, 9%, 20%);
+  --ls-border-color-dark: hsl(240, 9%, 10%);
+  --ls-checkbox-border-color: hsl(240, 10%, 18%);
+  --color-level-2: var(--bg2);
+
+  --box-shadow-med: 0px 6px 10px hsla(0, 0%, 1%, 0.15);
+  --box-shadow-small: 0px 2px 3px hsla(0, 0%, 1%, 0.15);
+  
+  --ls-scrollbar-width: 20px;
+  --ls-scrollbar-foreground-color: var(--ls-tertiary-background-color);
+  --ls-scrollbar-background-color: transparent;
+  --ls-scrollbar-thumb-hover-color: var(--ls-quaternary-background-color);
+}
+
+/* heading adjustments */
+h1, h2, h3 {
+    font-family: var(--sans-serif);
+    font-weight: 600 !important;
+}
+
+.ls-block :is(h1,h2) {
+  border-bottom: none;
+}
+
+.ls-block :is(h2, h3) {
+  font-size: 18px !important;
+}
+
+.editor-inner .uniline-block:is(.h1,.h2) {
+  border-bottom: none;
+  font-family: var(--sans-serif);
+}
+
+.title.ls-page-title {
+  line-height: 1.2;
+}
+
+/* generic block edits */
+.ls-block {
+    padding: 1px 0;
+}
+
+.ls-block {
+  border-radius: 4px;
+}
+
+/* hide help button */
+.cp__sidebar-help-btn {
+  display: none;
+}
+
+/* hide titlebar icons */
+a.nav-left,
+a.nav-right {
+  display: none;
+}
+
+/* hide recents */
+.recent {
+  display: none;
+}
+
+.cp__header::after,
+.cp__right-sidebar-topbar::after {
+  display: none;
+}
+
+/* desktop layout adjustments */
+@media (min-width: 400px) {
+
+  body {
+    font-size: 14px;
+  }
+
+  /* left sidebar styling */
+
+  .left-sidebar-inner {
+    margin-top: 16px;
+  }
+
+  .left-sidebar-inner > div > nav {
+    margin-left: 7px !important;
+  }
+
+  .left-sidebar-inner > div > nav > div > a {
+    font-size: 13px;
+    padding-top: 2px;
+    padding-bottom:2px;
+  }
+  .left-sidebar-inner > div > nav > div > div > a {
+    font-size: 13px;
+    padding-top: 2px;
+    padding-bottom:2px;
+  }
+
+  .favorites {
+    margin-left: -12px;
+    margin-top: 16px;
+    font-size: 13px;
+  }
+  .favorite-item {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* main area and right sidebar styling */
+  .cp__sidebar-left-layout.is-open + #main-content-container {
+    margin: 0 12px 12px 0px;
+  }
+
+  #main-content-container, .sidebar-item {
+      background-color: var(--ls-primary-background-color);
+      border-radius: 6px;
+      margin: 0 12px 12px 12px;
+      padding-top: 32px;
+      box-shadow: var(--box-shadow-med);
+      border: 1px solid var(--ls-border-color);
+      z-index: 9;
+  }
+
+  .cp__header {
+    height: 44px;
+  }
+  .cp__header > .r {
+    flex: 0 1 auto;
+  } 
+
+  .cp__header > .l {
+    margin-top: 4px;
+  }
+
+  .cp__right-sidebar-topbar {
+    display: none;
+  }
+
+  .theme-inner.ls-left-sidebar-open > #app-container > #left-container > .cp__header > .l {
+    justify-content: flex-end;
+    width: 265px;
+  }
+
+  .sidebar-item-list {
+    margin-top: 44px;
+    margin-right: 12px;
+    border-radius: 6px;
+    height: calc(100vh - 56px) !important;
+  }
+  .sidebar-item {
+    margin: 0 0 4px 0px;
+    box-shadow: none;
+  }
+
+  .journals-nav > a.active {
+    background-color: transparent !important;
+  }
+  .dark-theme .journals-nav > a.active {
+    background-color: transparent !important;
+  }
+
+  .cp__sidebar-main-layout, #app-container, .left-sidebar-inner {
+    background-color: var(--ls-secondary-background-color);
+  }
+  
+  /* hide navigation arrows only on desktop */
+  .it.navigation.nav-left.button.icon, .it.navigation.nav-right.button.icon, .button.icon.toggle-right-sidebar {
+    display: none;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  /* wordcount plugin adjustments */
+  .wordcount-btn {
+    display: block;
+    font-size: 14px;
+    color: var(--text-faint);
+  }
+ 
+}
+
+/* block references */
+.block-ref {
+  border-bottom-color:var(--ls-border-color);
+}
+.dark-theme .block-ref{
+  border-bottom-color: var(--bg4);
+}
+
+/* code adjustments */
+code {
+  background-color: var(--bg2);
+}
+
+.cm-s-solarized.cm-s-dark {
+  text-shadow: none;
+  background-color: var(--bg2);
+}
+
+.cm-s-solarized.cm-s-dark .CodeMirror-gutters {
+  background-color: var(--ls-secondary-background-color);
+}
+
+/* checkboxes */
+.form-checkbox {
+	border-radius: 4px;	
+  border: 1px solid var(--ls-checkbox-border-color);
+  background-color: var(--ls-page-checkbox-color);
+}
+.form-checkbox.checked {
+  background-color: #007aff;
+  border-color: hsl(211, 100%, 40%);
+}
+
+/* bullet adjustments */
+.rotating-arrow > svg {
+  color: var(--text-faint);
+}
+
+/* backlinks */
+.references-blocks > div > div > .content > div > div {
+  background-color: var(--bg-links);
+  border: 1px solid var(--ls-border-color-dark);
+  border-radius: 6px;
+}
+
+/* block embeds */
+.embed-block {
+  border-radius: 6px;
+  border: 1px solid var(--ls-border-color-dark);
+  background-color: var(--bg-links);
+}
+
+/* sidebar adjustments */
+.left-sidebar-inner > div > nav {
+  margin-left: 24px;
+}
+
+/* tint sidebar items */
+.cp__sidebar-left-layout a {
+  color: var(--text-secondary);
+}
+
+/* tint favorites */
+.favorite-item > a  {
+  color: var(--text-tertiary) !important;
+  font-weight: 500;
+}
+
+/* hide sidebar icons */
+.nav-header > div > a > i, .left-sidebar-inner > div > nav > div > a > i, .dropdown-caret, .ti-star {
+  display: none;
+}
+
+/* hide favorites title */
+.favorites > div > div:first-of-type {
+  display: none !important;
+}
+.favorites > li > a {
+  color: var(--text-quarternary) !important;
+}
+/* hide favorites icons */
+.page-icon > i {
+  display:none;
+}
+
+/* hide new page button */
+.new-page {
+  display: none;
+}
+
+/* tint icons except active filter icons */
+.ti:not(.ti-filter.text-green-400):not(.ti-filter.text-red-400)  {
+  color: var(--icon);
+}
+
+/* hide plugins icon */
+.ti.ti-puzzle::before {
+  content: "";
+}
+
+/* make sure dropdowns appear above content */
+.dropdown-wrapper.origin-top-right.enter-done {
+  z-index: 1000 !important;
+}
+
+/* autocomplete modal styling */
+#ui__ac {
+  font-family: var(--sans-serif);
+
+}
+
+#ui__ac > div {
+  color: var(--text-faint);
+
+}
+
+.absolute.rounded-md.shadow-lg.absolute-modal{
+  border: 1px solid var(--ls-border-color);
+  box-shadow: var(--box-shadow-small);
+  padding: 4px;
+  left: 0px !important;
+  overflow: scroll;
+}
+
+.dark-theme .absolute.rounded-md.shadow-lg.absolute-modal{
+  background-color: var(--bg3);
+  border: 1px solid var(--ls-border-color);
+}
+
+.menu-link {
+  border-radius: 4px;
+}
+
+.dark-theme .menu-link {
+  background-color: var(--bg3);
+}
+
+.menu-link:hover{
+  background-color:var(--bg-hover) !important;
+}
+
+/* selection state */
+.chosen {
+  background-color: var(--bg3) !important;
+}
+
+.dark-theme .chosen {
+  background-color: var(--bg4) !important;
+}
+
+
+/* context menus */
+
+#custom-context-menu, .dropdown-wrapper {
+  border: 1px solid var(--ls-border-color);
+  box-shadow: var(--box-shadow-small);
+}
+
+#custom-context-menu > div, .dropdown-wrapper {
+  padding: 4px;
+}
+
+.dark-theme #custom-context-menu > div {
+  background-color: var(--bg3);
+}
+
+.dropdown-wrapper {
+  background-color: var(--bg3);
+}
+
+
+
+
+mark {
+  background-color: rgba(82, 223, 255, 0.5);
+}
+.dark-theme mark {
+  background-color: rgba(0, 208, 255, 0.75);
+  color: var(--text-primary);
+}
+
+/* search modal styling*/
+.panel-content {
+  background-color: var(--bg1);
+  border: 1px solid var(--ls-border-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.ui__modal-panel {
+  box-shadow: var(--box-shadow-med);
+}
+
+@media (min-width: 768px) {
+  .cp__palette.cp__palette-main {
+    font-family: var(--sans-serif);
+    width: 760px;
+    padding: 8px;
+  }
+
+  .input-wrap > input {
+    padding: 6px 16px;
+    background-color: var(--bg3);
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  .dark-theme .input-wrap > input {
+    background-color: var(--bg2);
+  }
+
+  .input-wrap > input::placeholder {
+    color: var(--text-tertiary);
+  }
+  
+  #ui__ac-inner > div > a {
+    border-radius: 4px !important;
+  }
+ 
+  .recent-search > #ui__ac > #ui__ac-inner > div > a, .search-results-wrap > div > #ui__ac > #ui__ac-inner > div > a {
+    background-color: var(--bg1);
+  }
+
+}
+
+
+/* youtube embed adjustments */
+[id^=youtube-player] {
+  height: 700px;
+}
+
+/* task styling */
+.canceled, .done {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #7086a95c;
+  opacity: .9;
+}
+.marker-switch.block-marker, .task-status.block-marker {
+  color: var(--text-tertiary);
+  font-weight: 500;
+  margin-right: 1px !important;
+  font-size: 90%;
+}
+
+.timestamp-label {
+  color: var(--text-tertiary);
+  opacity: .2;
+}
+
+/* "linked references" tinting */
+.foldable-title {
+  color: var(--text-tertiary);
+}
+
+/* blockquote styling */
+blockquote {
+  background-color: var(--bg2);
+  border-left-color: var(--accent-teal);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* bullet styling */
+.bullet {
+  width: 5px !important;
+  height: 5px !important;
+}
+
+.bullet-container {
+  width: 13px !important;
+  height: 13px !important;
+  margin: 1px;
+}
+
+/* breadcrumbs */
+.breadcrumb, .breadcrumb > a {
+  color: var(--text-faint);
+  font-size: 14px;
+}
+
+/* filter panel styling */
+@media (min-width: 768px) {
+  .filters {
+    width: 700px;
+  }
+}
+
+.cp__filters-input-panel, .cp__filters-input {
+  background-color: var(--bg3);
+}
+
+.cp__filters-input-panel > input::placeholder, .ti.ti-search {
+  color: var(--text-tertiary);
+}
+
+.ti:not(.ti.ti-filter) {
+  color: var(--text-tertiary) !important;
+}
+
+.dark-theme .filters > div > button {
+  background-color: var(--bg3);
+  border: 1px solid var(--bg4) !important;
+  padding: 2px 4px;
+  box-shadow: 0px 1px 2px rgba(0,0,0, .2);
+}
+
+.light-theme .filters > div > button {
+  background-color: var(--bg2);
+  border: 1px solid var(--bg4) !important;
+  padding: 2px 4px;
+  box-shadow: 0px 1px 2px rgba(40, 37, 55, 0.1);
+}
+
+.filters > div > button:hover {
+  opacity: .9;
+  border: none;
+}
+
+.filters > div:first-of-type > div:first-of-type {
+  background-color: var(--bg3);
+}
+
+.text-xs {
+  color: var(--text-tertiary);
+}
+
+li.favorite-item[data-ref="—"] > a, li.favorite-item[data-ref="–"] > a, li.favorite-item[data-ref="-"] > a{
+  color: transparent !important;
+}
+
+.custom-query > div > div > div > div > a {
+  display: none;
+}
+
+/* tag styles */
+a.tag, .tag {
+  font-size: 14px !important;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  opacity: 1;
+}
+
+/* custom keyword link recoloring */
+a[data-ref="notes"] {
+  color: var(--text-primary);
+}
+
+a[data-ref="meetings"] {
+  color: var(--text-primary);
+}
+
+a[data-ref="daily"] {
+  color: var(--text-primary);
+}
+
+a[data-ref="related to"] {
+  color: var(--text-primary);
+}
+
+a[data-ref="explanation"] {
+  color: var(--text-primary);
+}
+
+a[data-ref="references"] {
+  color: var(--text-primary);
+}
+
+a[data-ref="fleeting notes"] {
+  color: var(--text-primary);
+}
