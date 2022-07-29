@@ -176,7 +176,7 @@ a.nav-right {
   content: '';
   border-top: 1px solid var(--ls-border-color);
   display: block;
-  width: 168px;
+  width: 148px;
   border-radius: 2px;
   margin: 16px auto;
 }
