@@ -723,3 +723,14 @@ a[data-ref="fleeting notes"] {
 .ls-block:focus-within > div > .block-content-wrapper::before {
   border-color: var(--ls-block-bullet-color);
 }
+
+/* hide wordcount warning on Mobile */
+.warning {
+  display: none;
+}
+/* show warning on desktop */
+@media (min-width: 400px) {
+  .warning {
+    display: inline;
+  }
+}
