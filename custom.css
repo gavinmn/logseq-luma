@@ -176,7 +176,7 @@ a.nav-right {
 }
 
 /* desktop layout adjustments */
-@media (min-width: 400px) {
+@media (min-width: 480px) {
 
   body {
     font-size: 14px;
