@@ -156,10 +156,10 @@ h1, h2, h3 {
 } */
 
 /* hide titlebar icons */
-/* a.nav-left,
+a.nav-left,
 a.nav-right {
   display: none;
-} */
+}
 
 /* hide recents */
 .recent {
