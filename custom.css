@@ -327,6 +327,9 @@ code {
 .rotating-arrow > svg {
   color: var(--text-faint);
 }
+.rotating-arrow {
+  border: 2px solid var(--bg1);
+}
 
 /* backlinks */
 .references-blocks > div > div > .content > div > div {
@@ -571,6 +574,7 @@ blockquote {
   width: 13px !important;
   height: 13px !important;
   margin: 1px;
+  left: -1px !important;
 }
 
 /* breadcrumbs */
@@ -709,4 +713,18 @@ a[data-ref="fleeting notes"] {
   background-color: var(--ls-block-bullet-color) !important; 
 }
 
+.ls-block[haschild] > div > .block-content-wrapper::before {
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  top: 12px;
+  bottom: 0;
+  left: -16px;
+  position: absolute;
+  border-left: var(--ls-block-bullet-threading-width) solid transparent;
+}
+
+.ls-block:focus-within > div > .block-content-wrapper::before {
+  border-color: var(--ls-block-bullet-color);
+}
 
