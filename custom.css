@@ -134,7 +134,7 @@ h1, h2, h3 {
 
 .editor-inner .uniline-block:is(.h1,.h2) {
   border-bottom: none;
-  font-family: var(--sans-serif);
+  font-size: 18px !important;
 }
 
 .title.ls-page-title {
@@ -156,10 +156,10 @@ h1, h2, h3 {
 } */
 
 /* hide titlebar icons */
-a.nav-left,
+/* a.nav-left,
 a.nav-right {
   display: none;
-}
+} */
 
 /* hide recents */
 .recent {
@@ -171,7 +171,6 @@ a.nav-right {
   display: none;
 }
 
-/* tint sidebar titlebar text*/
 .cp__right-sidebar-settings {
   color: var(--text-quarternary);
 }
@@ -327,9 +326,6 @@ code {
 .rotating-arrow > svg {
   color: var(--text-faint);
 }
-.rotating-arrow {
-  border: 2px solid var(--bg1);
-}
 
 /* backlinks */
 .references-blocks > div > div > .content > div > div {
@@ -412,6 +408,7 @@ code {
 
 #ui__ac > div {
   color: var(--text-faint);
+
 }
 
 .absolute.rounded-md.shadow-lg.absolute-modal{
@@ -574,7 +571,6 @@ blockquote {
   width: 13px !important;
   height: 13px !important;
   margin: 1px;
-  left: -1px !important;
 }
 
 /* breadcrumbs */
@@ -727,4 +723,3 @@ a[data-ref="fleeting notes"] {
 .ls-block:focus-within > div > .block-content-wrapper::before {
   border-color: var(--ls-block-bullet-color);
 }
-
