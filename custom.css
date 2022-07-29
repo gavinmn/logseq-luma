@@ -723,3 +723,9 @@ a[data-ref="fleeting notes"] {
 .ls-block:focus-within > div > .block-content-wrapper::before {
   border-color: var(--ls-block-bullet-color);
 }
+
+/* sidebar resizing handle adjustments  */
+.cp__right-sidebar-inner .resizer{
+  left: -4px;
+  width: 12px;
+}
