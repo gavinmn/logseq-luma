@@ -162,8 +162,31 @@ a.nav-right {
 } */
 
 /* hide recents */
-.recent {
+/* .recent {
   display: none;
+} */
+
+/* hide recent header */
+.recent > div > .header {
+  display: none !important;
+}
+
+/* add recent divider */
+.recent > div::before {
+  content: '';
+  border-top: 1px solid var(--ls-border-color);
+  display: block;
+  width: 168px;
+  border-radius: 2px;
+  margin: 16px auto;
+}
+
+/* style recents */
+.recent > div > .bd > ul > li > a {
+  color: var(--text-quarternary) !important;
+  font-weight: 500;
+  font-size: 13px;
+  padding-left: 14px !important;
 }
 
 .cp__header::after,
