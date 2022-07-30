@@ -137,20 +137,16 @@ h1, h2, h3 {
   font-size: 18px !important;
 }
 
-:not(.block-ref) .ls-block:not(:focus-within) h1,
-:not(.block-ref) .ls-block:not(:focus-within) h2,
-:not(.block-ref) .ls-block:not(:focus-within) h3,
-:not(.block-ref) .ls-block:not(:focus-within) h4,
-:not(.block-ref) .ls-block:not(:focus-within) h5,
-:not(.block-ref) .ls-block:not(:focus-within) h6,
-.editor-inner:not(:focus-within) .multiline-block:is(.h1,.h2,.h3,.h4,.h5,.h6)::first-line, 
-.editor-inner:not(:focus-within) .uniline-block:is(.h1,.h2,.h3,.h4,.h5,.h6), 
-.ls-block:not(:focus-within) :is(h1,h2,h3,h4,h5,h6) {
+:not(.block-ref) .ls-block h1,
+:not(.block-ref) .ls-block h2,
+:not(.block-ref) .ls-block h3,
+:not(.block-ref) .ls-block h4,
+:not(.block-ref) .ls-block h5,
+:not(.block-ref) .ls-block h6,
+.editor-inner .multiline-block:is(.h1,.h2,.h3,.h4,.h5,.h6)::first-line, 
+.editor-inner .uniline-block:is(.h1,.h2,.h3,.h4,.h5,.h6), 
+.ls-block :is(h1,h2,h3,h4,h5,h6) {
 	transform: translateY(-4px);
-}
-
-.editor-inner .uniline-block:is(.h1,.h2), .ls-block :is(h1,h2) {
-	margin: 0;
 }
 
 .title.ls-page-title {
