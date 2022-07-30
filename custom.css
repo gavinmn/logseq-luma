@@ -668,6 +668,12 @@ li.favorite-item[data-ref="—"] > a, li.favorite-item[data-ref="–"] > a, li.f
   display: none;
 }
 
+/* sidebar resizing handle adjustments  */
+.cp__right-sidebar-inner .resizer {
+  left: -4px;
+  width: 12px;
+}
+
 /* tag styles */
 a.tag, .tag {
   font-size: 14px !important;
@@ -708,7 +714,7 @@ a[data-ref="fleeting notes"] {
 
 /* bullet threading */
 /* bottom curve */
-.ls-block > div > div.items-center::before {
+.ls-block>div>div.items-center::before {
   pointer-events: none;
   content: "";
   left: calc(var(--ls-block-bullet-threading-width) * -1) !important;
@@ -723,7 +729,7 @@ a[data-ref="fleeting notes"] {
 }
 
 /* center line */
-.block-children > .ls-block::before {
+.block-children>.ls-block::before {
   pointer-events: none;
   content: "";
   top: -1rem;
@@ -741,26 +747,20 @@ a[data-ref="fleeting notes"] {
 
 /* remove color from bullet group collapse / expand lines */
 .block-children-left-border:hover {
-  background-color: var(--ls-block-bullet-color) !important; 
+  background-color: var(--ls-block-bullet-color) !important;
 }
 
-.ls-block[haschild] > div > .block-content-wrapper::before {
+.ls-block[haschild]>div>.block-content-wrapper::before {
   z-index: -1;
   pointer-events: none;
   content: "";
   top: 12px;
   bottom: 0;
-  left: -16px;
+  left: -16px !important;
   position: absolute;
   border-left: var(--ls-block-bullet-threading-width) solid transparent;
 }
 
-.ls-block:focus-within > div > .block-content-wrapper::before {
+.ls-block:focus-within>div>.block-content-wrapper::before {
   border-color: var(--ls-block-bullet-color);
-}
-
-/* sidebar resizing handle adjustments  */
-.cp__right-sidebar-inner .resizer{
-  left: -4px;
-  width: 12px;
 }
