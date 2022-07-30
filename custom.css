@@ -195,7 +195,7 @@ a.nav-right {
   display: block;
   width: 148px;
   border-radius: 2px;
-  margin: 16px auto;
+  margin: 4px auto 16px auto;
 }
 
 /* style recents */
@@ -250,8 +250,7 @@ a.nav-right {
     font-size: 13px;
   }
 
-  .favorite-item,
-  .recent-item {
+  .favorite-item, .recent-item {
     margin-top: 0;
     margin-bottom: 0;
   }
