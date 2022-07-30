@@ -827,3 +827,9 @@ a[data-ref="fleeting notes"] {
   left: -4px;
   width: 12px;
 }
+
+@media (max-width: 768px) {
+  .warning {
+    display: none;
+  }
+}
