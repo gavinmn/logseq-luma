@@ -756,7 +756,7 @@ a[data-ref="fleeting notes"] {
   content: "";
   top: 12px;
   bottom: 0;
-  left: -16px;
+  left: -16px !important;
   position: absolute;
   border-left: var(--ls-block-bullet-threading-width) solid transparent;
 }
