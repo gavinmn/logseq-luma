@@ -59,8 +59,6 @@ html[data-theme=light] {
   --box-shadow-med: 0px 6px 10px hsla(210, 4%, 18%, 0.05);
   --box-shadow-small: 0px 2px 3px hsla(210, 12%, 10%, 0.05);
 
-  --scrim: hsl(224, 8%, 40%);
-
   --ls-scrollbar-width: 20px;
   --ls-scrollbar-foreground-color: var(--ls-tertiary-background-color);
   --ls-scrollbar-background-color: transparent;
@@ -113,8 +111,6 @@ html[data-theme=dark] {
   --ls-border-color-dark: hsl(240, 9%, 10%);
   --ls-checkbox-border-color: hsl(240, 10%, 18%);
   --color-level-2: var(--bg2);
-
-  --scrim: hsl(240, 8%, 4%);
 
   --box-shadow-med: 0px 6px 10px hsla(0, 0%, 1%, 0.15);
   --box-shadow-small: 0px 2px 3px hsla(0, 0%, 1%, 0.15);
@@ -254,7 +250,8 @@ a.nav-right {
     font-size: 13px;
   }
 
-  .favorite-item {
+  .favorite-item,
+  .recent-item {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -552,22 +549,38 @@ mark {
   overflow: hidden;
 }
 
+/* style more at the bottom */
+.search-more {
+  background-color: var(--bg1);
+}
+
 .input-wrap {
   height: 40px !important;
+  margin-bottom: 8px;
+}
+
+/* divider line */
+.input-wrap::after {
+  content: "";
+  display: block;
+  margin-top: 8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  border-bottom: 1px solid var(--ls-border-color);
 }
 
 .ui__modal-panel {
   box-shadow: var(--box-shadow-med), var(--box-shadow-small);
   border-radius: 8px;
+  overflow: visible;
+}
+
+.recent-search>div:first-child {
+  margin-top: 8px;
 }
 
 .recent-search>div>div {
   color: var(--text-quarternary);
-}
-
-/* hide recent search text */
-.recent-search>div:first-child>div:first-child {
-  visibility: hidden;
 }
 
 .ui__toggle>span[aria-checked="false"] {
@@ -579,7 +592,6 @@ mark {
 }
 
 @media (min-width: 768px) {
-
   .cp__palette.cp__palette-main {
     font-family: var(--sans-serif);
     width: 760px;
@@ -730,6 +742,12 @@ li.favorite-item[data-ref="-"]>a {
   display: none;
 }
 
+/* sidebar resizing handle adjustments  */
+.cp__right-sidebar-inner .resizer {
+  left: -4px;
+  width: 12px;
+}
+
 /* tag styles */
 a.tag,
 .tag {
@@ -813,19 +831,13 @@ a[data-ref="fleeting notes"] {
   content: "";
   top: 12px;
   bottom: 0;
-  left: -16px;
+  left: -16px !important;
   position: absolute;
   border-left: var(--ls-block-bullet-threading-width) solid transparent;
 }
 
 .ls-block:focus-within>div>.block-content-wrapper::before {
   border-color: var(--ls-block-bullet-color);
-}
-
-/* sidebar resizing handle adjustments  */
-.cp__right-sidebar-inner .resizer {
-  left: -4px;
-  width: 12px;
 }
 
 @media (max-width: 768px) {
