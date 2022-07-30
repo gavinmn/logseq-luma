@@ -58,6 +58,9 @@ html[data-theme=light] {
 
   --box-shadow-med: 0px 6px 10px hsla(210, 4%, 18%, 0.05);
   --box-shadow-small: 0px 2px 3px hsla(210, 12%, 10%, 0.05);
+  --box-shadow-xsmall: 0px 1px 2px hsla(210, 12%, 10%, 0.05);
+
+  --scrim: hsl(224, 8%, 20%);
 
   --ls-scrollbar-width: 20px;
   --ls-scrollbar-foreground-color: var(--ls-tertiary-background-color);
@@ -112,8 +115,11 @@ html[data-theme=dark] {
   --ls-checkbox-border-color: hsl(240, 10%, 18%);
   --color-level-2: var(--bg2);
 
+  --scrim: hsl(240, 8%, 4%);
+
   --box-shadow-med: 0px 6px 10px hsla(0, 0%, 1%, 0.15);
   --box-shadow-small: 0px 2px 3px hsla(0, 0%, 1%, 0.15);
+  --box-shadow-xsmall: 0px 1px 2px hsla(0, 0%, 1%, 0.15);
 
   --ls-scrollbar-width: 20px;
   --ls-scrollbar-foreground-color: var(--ls-tertiary-background-color);
@@ -250,7 +256,8 @@ a.nav-right {
     font-size: 13px;
   }
 
-  .favorite-item, .recent-item {
+  .favorite-item,
+  .recent-item {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -590,38 +597,55 @@ mark {
   background: var(--scrim);
 }
 
-@media (min-width: 768px) {
-  .cp__palette.cp__palette-main {
-    font-family: var(--sans-serif);
-    width: 760px;
-    padding: 8px;
-  }
-
-  .input-wrap>input {
-    padding: 6px 16px;
-    background-color: var(--bg3) !important;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-
-  .dark-theme .input-wrap>input {
-    background-color: var(--bg2);
-  }
-
-  .input-wrap>input::placeholder {
-    color: var(--text-tertiary);
-  }
-
-  #ui__ac-inner>div>a {
-    border-radius: 4px !important;
-  }
-
-  .recent-search>#ui__ac>#ui__ac-inner>div>a,
-  .search-results-wrap>div>#ui__ac>#ui__ac-inner>div>a {
-    background-color: var(--bg1);
-  }
-
+/* p and b adjustments */
+div[title="Page"],
+div[title="Block"] {
+  border: 1px solid var(--ls-border-color);
+  background-color: var(--bg1);
+  margin-right: 12px;
 }
+
+/* non bold breadcrumbs */
+#ui__ac-inner>div>a>div>span>div>div:nth-child(2)>.mb-1>.breadcrumb {
+  font-weight: normal;
+}
+
+
+/* @media (min-width: 768px) { */
+
+.cp__palette.cp__palette-main {
+  font-family: var(--sans-serif);
+  max-width: 760px;
+  padding: 8px;
+}
+
+.input-wrap>input {
+  padding: 6px 16px;
+  background-color: var(--bg3) !important;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.dark-theme .input-wrap>input {
+  background-color: var(--bg2);
+}
+
+.input-wrap>input::placeholder {
+  color: var(--text-tertiary);
+}
+
+#ui__ac-inner>div>a {
+  border-radius: 4px !important;
+  margin-top: 8px;
+  padding-left: 8px;
+}
+
+.recent-search>#ui__ac>#ui__ac-inner>div>a,
+.search-results-wrap>div>#ui__ac>#ui__ac-inner>div>a {
+  background-color: var(--bg1);
+}
+
+/* } */
 
 
 /* youtube embed adjustments */
