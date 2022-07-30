@@ -137,6 +137,18 @@ h1, h2, h3 {
   font-size: 18px !important;
 }
 
+:not(.block-ref) .ls-block h1,
+:not(.block-ref) .ls-block h2,
+:not(.block-ref) .ls-block h3,
+:not(.block-ref) .ls-block h4,
+:not(.block-ref) .ls-block h5,
+:not(.block-ref) .ls-block h6,
+.editor-inner .multiline-block:is(.h1,.h2,.h3,.h4,.h5,.h6)::first-line, 
+.editor-inner .uniline-block:is(.h1,.h2,.h3,.h4,.h5,.h6), 
+.ls-block :is(h1,h2,h3,h4,h5,h6) {
+	transform: translateY(-4px);
+}
+
 .title.ls-page-title {
   line-height: 1.2;
 }
