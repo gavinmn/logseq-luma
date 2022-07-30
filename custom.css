@@ -472,7 +472,6 @@ code {
 
 #ui__ac>div {
   color: var(--text-faint);
-
 }
 
 .absolute.rounded-md.shadow-lg.absolute-modal {
@@ -490,6 +489,7 @@ code {
 
 .menu-link {
   border-radius: 4px;
+  margin-top: 0 !important;
 }
 
 .dark-theme .menu-link {
@@ -562,7 +562,7 @@ mark {
 
 .input-wrap {
   height: 40px !important;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 /* divider line */
@@ -579,10 +579,6 @@ mark {
   box-shadow: var(--box-shadow-med), var(--box-shadow-small);
   border-radius: 8px;
   overflow: visible;
-}
-
-.recent-search>div:first-child {
-  margin-top: 8px;
 }
 
 .recent-search>div>div {
@@ -636,7 +632,7 @@ div[title="Block"] {
 
 #ui__ac-inner>div>a {
   border-radius: 4px !important;
-  margin-top: 8px;
+  /* margin-top: 8px; */
   padding-left: 8px;
 }
 
@@ -765,12 +761,6 @@ li.favorite-item[data-ref="-"]>a {
   display: none;
 }
 
-/* sidebar resizing handle adjustments  */
-.cp__right-sidebar-inner .resizer {
-  left: -4px;
-  width: 12px;
-}
-
 /* tag styles */
 a.tag,
 .tag {
@@ -861,6 +851,12 @@ a[data-ref="fleeting notes"] {
 
 .ls-block:focus-within>div>.block-content-wrapper::before {
   border-color: var(--ls-block-bullet-color);
+}
+
+/* sidebar resizing handle adjustments  */
+.cp__right-sidebar-inner .resizer {
+  left: -4px;
+  width: 12px;
 }
 
 @media (max-width: 768px) {
