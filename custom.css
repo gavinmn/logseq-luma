@@ -805,7 +805,7 @@ a[data-ref="fleeting notes"] {
 .ls-block>div>div.items-center::before {
   pointer-events: none;
   content: "";
-  left: calc(var(--ls-block-bullet-threading-width) * -1) !important;
+  left: calc(var(--ls-block-bullet-threading-width) * -1);
   right: 6px;
   top: calc(-50% + var(--ls-block-bullet-threading-width) * 0.5 - 1px);
   bottom: 50%;
