@@ -684,17 +684,6 @@ blockquote {
   font-size: 14px;
 }
 
-/* bullet styling */
-.bullet {
-  width: 5px !important;
-  height: 5px !important;
-}
-
-.bullet-container {
-  width: 13px !important;
-  height: 13px !important;
-  margin: 1px;
-}
 
 /* breadcrumbs */
 .breadcrumb,
@@ -800,31 +789,22 @@ a[data-ref="fleeting notes"] {
 }
 
 
+/* bullet styling */
+.bullet {
+  width: 5px !important;
+  height: 5px !important;
+}
+
+a>.bullet-container {
+  width: 13px !important;
+  height: 13px !important;
+  margin-left: 1px !important;
+}
+
 /* bullet threading */
 /* bottom curve */
 .ls-block>div>div.items-center::before {
-  pointer-events: none;
-  content: "";
-  left: calc(var(--ls-block-bullet-threading-width) * -1);
-  right: 6px;
-  top: calc(-50% + var(--ls-block-bullet-threading-width) * 0.5 - 1px);
-  bottom: 50%;
-  /* shift left 1px for border */
-  position: absolute;
-  border-left: var(--ls-block-bullet-threading-width) solid transparent;
-  border-bottom: var(--ls-block-bullet-threading-width) solid transparent;
   border-bottom-left-radius: 4px !important;
-}
-
-/* center line */
-.block-children>.ls-block::before {
-  pointer-events: none;
-  content: "";
-  top: -1rem;
-  bottom: 0;
-  border-left: var(--ls-block-bullet-threading-width) solid transparent;
-  left: calc(var(--ls-block-bullet-threading-width) * -1);
-  position: absolute;
 }
 
 /* remove color from bullets that are threaded */
@@ -839,18 +819,7 @@ a[data-ref="fleeting notes"] {
 }
 
 .ls-block[haschild]>div>.block-content-wrapper::before {
-  z-index: -1;
-  pointer-events: none;
-  content: "";
-  top: 12px;
-  bottom: 0;
-  left: -16px !important;
-  position: absolute;
-  border-left: var(--ls-block-bullet-threading-width) solid transparent;
-}
-
-.ls-block:focus-within>div>.block-content-wrapper::before {
-  border-color: var(--ls-block-bullet-color);
+  z-index: -1 !important;
 }
 
 /* sidebar resizing handle adjustments  */
