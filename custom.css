@@ -658,12 +658,22 @@ div[title="Block"] {
   opacity: .9;
 }
 
+.inline.later>input,
+.inline.done>input,
+.inline.now>input,
+.inline.todo>input,
+.inline.doing>input,
+.inline.waiting>input {
+  margin-top: 0px !important;
+}
+
 .marker-switch.block-marker,
 .task-status.block-marker {
   color: var(--text-tertiary);
   font-weight: 500;
   margin-right: 1px !important;
   font-size: 90%;
+  margin-left: -5px;
 }
 
 .timestamp-label {
