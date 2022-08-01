@@ -809,7 +809,7 @@ a>.bullet-container {
 
 /* remove color from bullets that are threaded */
 .bullet {
-  background-color: var(--ls-block-bullet-color) !important;
+  /* background-color: var(--ls-block-bullet-color) !important; */
   box-shadow: unset !important;
 }
 
