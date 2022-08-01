@@ -222,7 +222,7 @@ a.nav-right {
 }
 
 /* desktop layout adjustments */
-@media (min-width: 480px) {
+@media (hover: hover) {
 
   body {
     font-size: 14px;
@@ -703,7 +703,7 @@ blockquote {
 }
 
 /* filter panel styling */
-@media (min-width: 768px) {
+@media (hover: hover) {
   .filters {
     width: 700px;
   }
@@ -786,11 +786,11 @@ a[data-ref="related to"] {
   color: var(--text-primary);
 }
 
-a[data-ref="explanation"] {
+a[data-ref="further explanation"] {
   color: var(--text-primary);
 }
 
-a[data-ref="references"] {
+a[data-ref="reference notes"] {
   color: var(--text-primary);
 }
 
@@ -838,7 +838,7 @@ a>.bullet-container {
   width: 12px;
 }
 
-@media (max-width: 768px) {
+@media (hover: none) {
   .warning {
     display: none;
   }
