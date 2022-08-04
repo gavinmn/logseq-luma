@@ -653,9 +653,8 @@ div[title="Block"] {
 .canceled,
 .done {
   text-decoration: line-through;
-  text-decoration-thickness: 1px;
-  text-decoration-color: #7086a95c;
-  opacity: .9;
+  text-decoration-color: var(--text-primary);
+  opacity: 1;
 }
 
 .inline.later>input,
@@ -756,9 +755,12 @@ li.favorite-item[data-ref="-"]>a {
   color: transparent !important;
 }
 
+/* custom query adjustments */
 .custom-query>div>div>div>div>a {
   display: none;
 }
+
+
 
 /* tag styles */
 a.tag,
@@ -767,35 +769,6 @@ a.tag,
   color: var(--text-tertiary);
   font-weight: 500;
   opacity: 1;
-}
-
-/* custom keyword link recoloring */
-a[data-ref="notes"] {
-  color: var(--text-primary);
-}
-
-a[data-ref="meetings"] {
-  color: var(--text-primary);
-}
-
-a[data-ref="daily"] {
-  color: var(--text-primary);
-}
-
-a[data-ref="related to"] {
-  color: var(--text-primary);
-}
-
-a[data-ref="further explanation"] {
-  color: var(--text-primary);
-}
-
-a[data-ref="reference notes"] {
-  color: var(--text-primary);
-}
-
-a[data-ref="fleeting notes"] {
-  color: var(--text-primary);
 }
 
 
@@ -836,10 +809,4 @@ a>.bullet-container {
 .cp__right-sidebar-inner .resizer {
   left: -4px;
   width: 12px;
-}
-
-@media (hover: none) {
-  .warning {
-    display: none;
-  }
 }
