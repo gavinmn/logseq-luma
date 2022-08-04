@@ -543,7 +543,7 @@ mark {
 }
 
 .dark-theme mark {
-  background-color: rgba(0, 208, 255, 0.75);
+  background-color: hsla(200, 100%, 20%, 0.85);
   color: var(--text-primary);
 }
 
