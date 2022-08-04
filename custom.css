@@ -29,7 +29,7 @@ html[data-theme=light] {
   --bg3: hsl(227, 33%, 95%);
   --bg4: hsl(223, 14%, 90%);
 
-  --bg-hover: hsla(227, 33%, 95%, 0.494);
+  --bg-hover: hsla(227, 33%, 90%, 0.494);
   --bg-links: var(--bg2);
 
   --header-text: hsl(205, 23%, 16%);
@@ -420,6 +420,11 @@ code {
 .favorite-item>a {
   color: var(--text-tertiary) !important;
   font-weight: 500;
+}
+
+.favorite-item>a:hover,
+.recent-item>a:hover {
+  background-color: var(--bg-hover) !important;
 }
 
 /* hide sidebar icons */
