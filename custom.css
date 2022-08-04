@@ -358,14 +358,35 @@ code {
   background-color: var(--bg2);
 }
 
+.CodeMirror {
+  border-radius: 6px;
+  border: 1px solid var(--ls-border-color);
+}
+
 .cm-s-solarized.cm-s-dark {
   text-shadow: none;
   background-color: var(--bg2);
 }
 
 .cm-s-solarized.cm-s-dark .CodeMirror-gutters {
-  background-color: var(--ls-secondary-background-color);
+  background-color: var(--bg-hover);
 }
+
+.extensions__code-lang {
+  border-radius: 6px;
+  margin: 1px;
+}
+
+.CodeMirror-code {
+  color: var(--text-secondary);
+}
+
+.CodeMirror-linenumber {
+  color: var(--text-quarternary) !important;
+  text-shadow: none !important;
+}
+
+
 
 /* checkboxes */
 .form-checkbox {
