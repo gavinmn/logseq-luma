@@ -29,7 +29,7 @@ html[data-theme=light] {
   --bg3: hsl(227, 33%, 95%);
   --bg4: hsl(223, 14%, 90%);
 
-  --bg-hover: hsla(227, 33%, 95%, 0.494);
+  --bg-hover: hsla(227, 33%, 90%, 0.494);
   --bg-links: var(--bg2);
 
   --header-text: hsl(205, 23%, 16%);
@@ -422,6 +422,11 @@ code {
   font-weight: 500;
 }
 
+.favorite-item>a:hover,
+.recent-item>a:hover {
+  background-color: var(--bg-hover) !important;
+}
+
 /* hide sidebar icons */
 .nav-header>div>a>i,
 .left-sidebar-inner>div>nav>div>a>i,
@@ -543,7 +548,7 @@ mark {
 }
 
 .dark-theme mark {
-  background-color: rgba(0, 208, 255, 0.75);
+  background-color: hsla(200, 100%, 20%, 0.85);
   color: var(--text-primary);
 }
 
@@ -653,9 +658,8 @@ div[title="Block"] {
 .canceled,
 .done {
   text-decoration: line-through;
-  text-decoration-thickness: 1px;
-  text-decoration-color: #7086a95c;
-  opacity: .9;
+  text-decoration-color: var(--text-primary);
+  opacity: 1;
 }
 
 .inline.later>input,
@@ -756,9 +760,12 @@ li.favorite-item[data-ref="-"]>a {
   color: transparent !important;
 }
 
+/* custom query adjustments */
 .custom-query>div>div>div>div>a {
   display: none;
 }
+
+
 
 /* tag styles */
 a.tag,
@@ -767,35 +774,6 @@ a.tag,
   color: var(--text-tertiary);
   font-weight: 500;
   opacity: 1;
-}
-
-/* custom keyword link recoloring */
-a[data-ref="notes"] {
-  color: var(--text-primary);
-}
-
-a[data-ref="meetings"] {
-  color: var(--text-primary);
-}
-
-a[data-ref="daily"] {
-  color: var(--text-primary);
-}
-
-a[data-ref="related to"] {
-  color: var(--text-primary);
-}
-
-a[data-ref="further explanation"] {
-  color: var(--text-primary);
-}
-
-a[data-ref="reference notes"] {
-  color: var(--text-primary);
-}
-
-a[data-ref="fleeting notes"] {
-  color: var(--text-primary);
 }
 
 
@@ -836,10 +814,4 @@ a>.bullet-container {
 .cp__right-sidebar-inner .resizer {
   left: -4px;
   width: 12px;
-}
-
-@media (hover: none) {
-  .warning {
-    display: none;
-  }
 }
