@@ -139,8 +139,12 @@ h3 {
   border-bottom: none;
 }
 
-.ls-block :is(h2, h3) {
+.ls-block :is(h2) {
   font-size: 18px !important;
+}
+
+.ls-block :is(h3) {
+  font-size: 16px !important;
 }
 
 .editor-inner .uniline-block:is(.h1, .h2) {
