@@ -660,10 +660,14 @@ div[title="Block"] {
   color: var(--text-tertiary);
 }
 
-#ui__ac-inner>div>a {
+#ui__ac-inner>div>a,
+#ui__ac-inner>div:first-of-type>div:nth-child(2)>a {
   border-radius: 4px !important;
-  /* margin-top: 8px; */
   padding-left: 8px;
+}
+
+.ui__ac-group-name {
+  color: var(--text-quarternary);
 }
 
 .recent-search>#ui__ac>#ui__ac-inner>div>a,
