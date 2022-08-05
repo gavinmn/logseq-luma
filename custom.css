@@ -844,3 +844,13 @@ a>.bullet-container {
   left: -4px;
   width: 12px;
 }
+
+/* calendar styling */
+
+.dark-theme .available.active.start-date.end-date {
+  background-color: var(--bg3);
+}
+
+.dark-theme .available:hover {
+  background-color: var(--bg3) !important;
+}
