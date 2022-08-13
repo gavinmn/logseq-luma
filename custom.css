@@ -353,6 +353,10 @@ a.nav-right {
   border-bottom-color: var(--ls-border-color);
 }
 
+.references-blocks>div>div>.content>div.flex.flex-col {
+  row-gap: 12px;
+}
+
 .dark-theme .block-ref {
   border-bottom-color: var(--bg4);
 }
@@ -367,13 +371,14 @@ code {
   border: 1px solid var(--ls-border-color);
 }
 
-.cm-s-solarized.cm-s-dark {
+.cm-s-solarized.cm-s-dark,
+.cm-s-solarized.cm-s-light {
   text-shadow: none;
   background-color: var(--bg2);
 }
 
-.cm-s-solarized.cm-s-dark .CodeMirror-gutters {
-  background-color: var(--bg-hover);
+.CodeMirror-gutters {
+  background-color: var(--bg-hover) !important;
 }
 
 .extensions__code-lang {
@@ -565,9 +570,6 @@ code {
   background-color: var(--bg3);
 }
 
-
-
-
 mark {
   background-color: rgba(82, 223, 255, 0.5);
 }
@@ -584,6 +586,7 @@ mark {
   border-radius: 8px;
   overflow: hidden;
 }
+
 
 /* style more at the bottom */
 .search-more {
@@ -641,8 +644,11 @@ div[title="Block"] {
 
 .cp__palette.cp__palette-main {
   font-family: var(--sans-serif);
-  max-width: 760px;
   padding: 8px;
+}
+
+.ls-search {
+  width: 100% !important;
 }
 
 .input-wrap>input {
