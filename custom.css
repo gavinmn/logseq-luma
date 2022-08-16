@@ -357,6 +357,10 @@ a.nav-right {
   row-gap: 12px;
 }
 
+.references-blocks>div>div>.content>div.flex.flex-col>div>div>div {
+  background-color: unset;
+}
+
 .dark-theme .block-ref {
   border-bottom-color: var(--bg4);
 }
@@ -419,10 +423,6 @@ code {
   background-color: var(--bg-links);
   border: 1px solid var(--ls-border-color);
   border-radius: 6px;
-}
-
-.dark-theme .references-blocks>div>div>.content>div>div {
-  border: 1px solid var(--ls-border-color-dark);
 }
 
 /* block embeds */
