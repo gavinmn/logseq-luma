@@ -581,6 +581,10 @@ code {
 
 #custom-context-menu>div,
 .dropdown-wrapper {
+  border-radius: 6px;
+}
+
+.menu-links-wrapper {
   padding: 4px;
 }
 
