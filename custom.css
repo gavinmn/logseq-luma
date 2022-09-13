@@ -44,7 +44,6 @@ html[data-theme=light] {
   --text-faint: hsl(225, 23%, 76%);
   --icon: hsl(227, 16%, 67%);
 
-  --ls-link-ref-text-color: var(--text-secondary);
 
   --ls-primary-text-color: var(--text-primary);
   --ls-primary-background-color: var(--bg1);
@@ -94,7 +93,6 @@ html[data-theme=dark] {
   --text-faint: hsl(226, 10%, 56%);
   --icon: hsl(226, 10%, 56%);
 
-  --ls-link-ref-text-color: var(--text-secondary) !important;
 
   --ls-primary-text-color: var(--text-primary);
   --ls-secondary-text-color: var(--text-secondary);
