@@ -9,6 +9,7 @@
 :root {
   --sans-serif: "Inter", sans;
   --ls-left-sidebar-width: 200px;
+  --ls-main-content-max-width: 810px;
 }
 
 /* hide scrollbars */
@@ -33,12 +34,17 @@ html[data-theme=light] {
   --bg-links: var(--bg2);
 
   --header-text: hsl(205, 23%, 16%);
-  --text-primary: hsl(205, 23%, 16%);
-  --text-secondary: hsl(226, 9%, 44%);
-  --text-tertiary: hsl(225, 13%, 58%);
+  /* --text-primary: hsl(205, 23%, 16%); */
+  --text-primary: hsl(222, 47%, 11%);
+  /* --text-secondary: hsl(226, 9%, 44%); */
+  --text-secondary: #64748b;
+  /* --text-tertiary: hsl(225, 13%, 58%); */
+  --text-tertiary: #94a3b8;
   --text-quarternary: hsl(224, 14%, 64%);
   --text-faint: hsl(225, 23%, 76%);
   --icon: hsl(227, 16%, 67%);
+
+  --ls-link-ref-text-color: var(--text-secondary);
 
   --ls-primary-text-color: var(--text-primary);
   --ls-primary-background-color: var(--bg1);
@@ -47,6 +53,7 @@ html[data-theme=light] {
   --ls-quaternary-background-color: var(--bg3);
   --ls-icon-color: var(--icon);
   --ls-block-properties-background-color: var(--bg2);
+  --ls-block-highlight-color: hsla(197, 71%, 52%, 0.3);
   --ls-table-tr-even-background-color: var(--bg2);
   --ls-block-bullet-border-color: var(--bg3);
   --ls-page-checkbox-color: var(--bg2);
@@ -87,12 +94,14 @@ html[data-theme=dark] {
   --text-faint: hsl(226, 10%, 56%);
   --icon: hsl(226, 10%, 56%);
 
+  --ls-link-ref-text-color: var(--text-secondary) !important;
+
   --ls-primary-text-color: var(--text-primary);
   --ls-secondary-text-color: var(--text-secondary);
   --ls-link-ref-text-color: hsl(218, 40%, 62%);
   --ls-page-checkbox-color: hsl(240, 7%, 10%);
   --ls-tag-text-color: hsl(217, 25%, 55%);
-  --ls-block-highlight-color: hsla(217, 37%, 22%, 0.635);
+  --ls-block-highlight-color: hsla(197, 71%, 52%, 0.3);
   --ls-page-inline-code-bg-color: var(--bg2);
   --ls-page-properties-background-color: var(--bg2);
   --ls-guideline-color: hsla(217, 25%, 55%, 0.196);
@@ -239,7 +248,7 @@ a.nav-right {
   }
 
   .left-sidebar-inner>div>nav {
-    margin-left: 7px !important;
+    margin-left: 0px !important;
   }
 
   .left-sidebar-inner>div>nav>div>a {
@@ -255,7 +264,7 @@ a.nav-right {
   }
 
   .favorites {
-    margin-left: -12px;
+    margin-left: 0px;
     margin-top: 16px;
     font-size: 13px;
   }
@@ -344,6 +353,7 @@ a.nav-right {
     display: block;
     font-size: 14px;
     color: var(--text-faint);
+    border: none;
   }
 
 }
@@ -352,8 +362,11 @@ a.nav-right {
 
 .page-properties,
 .block-properties {
-  background-color: var(--bg2);
+  background-color: var(--bg1);
   border-radius: 6px;
+  font-size: 12px;
+  padding: 0;
+  margin: 2px 0;
 }
 
 .page-property-key,
