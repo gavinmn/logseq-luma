@@ -237,6 +237,7 @@ a.nav-right {
 
   body {
     font-size: 14px;
+    letter-spacing: -0.00622354em;
   }
 
   /* left sidebar styling */
@@ -445,9 +446,16 @@ code {
   background-color: var(--ls-page-checkbox-color);
 }
 
-.form-checkbox.checked {
+.form-checkbox.checked,
+.form-checkbox:checked {
   background-color: #007aff;
   border-color: hsl(211, 100%, 40%);
+}
+
+.dark-theme .form-checkbox.checked,
+.dark-theme .form-checkbox:checked {
+  background-color: var(--text-secondary) !important;
+  border-color: var(--text-secondary) !important;
 }
 
 /* bullet adjustments */
@@ -495,11 +503,16 @@ code {
 }
 
 /* hide sidebar icons */
-.nav-header>div>a>i,
-.left-sidebar-inner>div>nav>div>a>i,
-.dropdown-caret,
-.ti-star {
+
+.ls-icon-calendar,
+.ls-icon-database,
+.ls-icon-file-text,
+.ls-icon-puzzle {
   display: none;
+}
+
+.item.group.flex.items-center.p-2.text-sm.font-medium.rounded-md {
+  padding-left: 0 !important;
 }
 
 /* hide favorites title */
@@ -514,6 +527,10 @@ code {
 /* hide favorites icons */
 .page-icon>i {
   display: none;
+}
+
+.page-icon {
+  opacity: 1 !important;
 }
 
 /* hide new page button */
