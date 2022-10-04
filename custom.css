@@ -287,7 +287,7 @@ a.nav-right {
     padding-top: 32px;
     box-shadow: var(--box-shadow-med);
     border: 1px solid var(--ls-border-color);
-    z-index: 9;
+    z-index: 8;
   }
 
   .cp__header {
@@ -503,6 +503,14 @@ code {
 }
 
 /* hide sidebar icons */
+
+#repo-switch>span.dropdown-caret {
+  display: none;
+}
+
+#repo-name>span {
+  opacity: .4;
+}
 
 .ls-icon-calendar,
 .ls-icon-database,
