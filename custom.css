@@ -933,22 +933,24 @@ a>.bullet-container {
 }
 
 /* experimental */
+@media (hover: hover) {
 
-.cp__header,
-.cp__right-sidebar-topbar {
-  height: 10px;
-  opacity: 0;
-  transition: all 150ms ease-in-out;
-}
+  .cp__header,
+  .cp__right-sidebar-topbar {
+    height: 10px;
+    opacity: 0;
+    transition: all 150ms ease-in-out;
+  }
 
-.cp__header:hover,
-.cp__right-sidebar-topbar:hover {
-  height: 44px;
-  opacity: 1;
-}
+  .cp__header:hover,
+  .cp__right-sidebar-topbar:hover {
+    height: 44px;
+    opacity: 1;
+  }
 
-.r.flex {
-  flex-grow: 1;
+  .r.flex {
+    flex-grow: 1;
+  }
 }
 
 @media (min-width: 1024px) {
