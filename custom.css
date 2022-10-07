@@ -276,14 +276,14 @@ a.nav-right {
 
   /* main area and right sidebar styling */
   .cp__sidebar-left-layout.is-open+#main-content-container {
-    margin: 0 12px 12px 0px;
+    margin: 0 10px 10px 0px;
   }
 
   #main-content-container,
   .sidebar-item {
     background-color: var(--ls-primary-background-color);
-    border-radius: 6px;
-    margin: 0 12px 12px 12px;
+    border-radius: 4px;
+    margin: 0 10px 10px 10px;
     padding-top: 32px;
     box-shadow: var(--box-shadow-med);
     border: 1px solid var(--ls-border-color);
@@ -515,7 +515,8 @@ code {
 .ls-icon-calendar,
 .ls-icon-database,
 .ls-icon-file-text,
-.ls-icon-puzzle {
+.ls-icon-puzzle,
+.pl-1>.ls-icon-cloud {
   display: none;
 }
 
@@ -929,4 +930,29 @@ a>.bullet-container {
 
 .dark-theme .available:hover {
   background-color: var(--bg3) !important;
+}
+
+/* experimental */
+
+.cp__header,
+.cp__right-sidebar-topbar {
+  height: 10px;
+  opacity: 0;
+  transition: all 150ms ease-in-out;
+}
+
+.cp__header:hover,
+.cp__right-sidebar-topbar:hover {
+  height: 44px;
+  opacity: 1;
+}
+
+.r.flex {
+  flex-grow: 1;
+}
+
+@media (min-width: 1024px) {
+  .cp__right-sidebar.closed {
+    width: 0 !important;
+  }
 }
