@@ -931,6 +931,12 @@ a>.bullet-container {
   background-color: var(--bg3) !important;
 }
 
+/* set YouTube player to correct aspect ratio */
+iframe[id^='youtube-player'] {
+	aspect-ratio: 16/9;
+	height: auto;
+}
+
 /* experimental */
 @media (hover: hover) {
 
