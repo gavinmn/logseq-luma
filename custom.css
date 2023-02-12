@@ -51,6 +51,7 @@ html[data-theme=light] {
   --ls-tertiary-background-color: var(--bg3);
   --ls-quaternary-background-color: var(--bg3);
   --ls-icon-color: var(--icon);
+  --ls-page-properties-background-color: var(--bg2);
   --ls-block-properties-background-color: var(--bg2);
   --ls-block-highlight-color: hsla(197, 71%, 52%, 0.3);
   --ls-table-tr-even-background-color: var(--bg2);
@@ -102,6 +103,7 @@ html[data-theme=dark] {
   --ls-block-highlight-color: hsla(197, 71%, 52%, 0.3);
   --ls-page-inline-code-bg-color: var(--bg2);
   --ls-page-properties-background-color: var(--bg2);
+  --ls-block-properties-background-color: var(--bg2);
   --ls-guideline-color: hsla(217, 25%, 55%, 0.196);
   --ls-block-bullet-color: hsl(217, 29%, 69%);
   --ls-block-bullet-border-color: hsla(217, 29%, 69%, 0.2);
@@ -114,7 +116,6 @@ html[data-theme=dark] {
   --ls-secondary-background-color: var(--bg2);
   --ls-tertiary-background-color: var(--bg3);
   --ls-quaternary-background-color: var(--bg4);
-  --ls-block-properties-background-color: var(--bg2);
   --ls-table-tr-even-background-color: var(--bg2);
   --ls-block-bullet-border-color: var(--bg3);
   --ls-border-color: hsl(240, 9%, 20%);
@@ -248,7 +249,7 @@ a.nav-right {
   .left-sidebar-inner>div>nav {
     margin-left: 0px !important;
   }
-  
+
   .left-sidebar-inner .nav-content-item .bd ul a .page-icon {
 	  display: none;
   }
@@ -364,7 +365,6 @@ a.nav-right {
 
 .page-properties,
 .block-properties {
-  background-color: var(--bg1);
   border-radius: 6px;
   font-size: 12px;
   padding: 0;
